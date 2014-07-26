@@ -1,0 +1,44 @@
+A Pitch for Personal Weight Management Shiny App
+========================================================
+author: Mahathi Bhagavatula
+date: 25/07/2014
+
+Introduction
+========================================================
+
+- Personal Weight Management is an application which gives certain statistics related to the details of the person. 
+- The details which are taken as input are the person's name, age, height, weight, whether they want to loose/ gain weight, number of kg's he/she wants to loose/gain, in how many number of days, which physical activity they prefer.
+- The statistics this application will output is the person's Body Mass Index(BMI), In which Range does that fall, Maximum Heart Rate(MHR), number of calories they need to consume and spend per day to acheive their target.
+
+Details on Output Statistics
+========================================================
+
+- Let us assume, details of a user with height=155cm and weight= 80kg. Then its BMI is given by 
+```{r, echo=TRUE}
+((80*10000)/(155*155))
+```
+- Similary, for a user of age 25 and female gender, the MHR(Maximum Heart Rate) is given as 
+```{r, echo=TRUE}
+ 216-(1.09*25)
+```
+
+
+Details on Output(Contind...)
+========================================================
+
+- Calories Needs to Spend per day : if a user wants to reduce 15kg in 60 days, then he need to spend the following # of calories a day.
+```{r,echo=TRUE}
+(15*7716.17917647)/60
+```
+- Calories Needs to Consume per day: From the previous example, a user with age =25 years, height=155cm, weight=80kg, gender=female, wants to loose 15kg in 60 days doing high physical activity. The calories count is given below:
+```{r,echo=FALSE}
+((655 + ( 9.6 * 80) + ( 1.8 * 155) - ( 4.7 * 25 ))*1.9) - ((15*7716.17917647)/60)
+```
+
+
+Conclusion
+========================================================
+- The application is a kind of interactive and interesting .
+- This shiny app mainly aimed at using many kinds of html types to make it much interactive.
+- This app also involved a pretty much caluculations and terms which mostly every one is aware of, as it is about weight management :P
+- Finally, I would hope that you guys will enjoy the project and this presentation.
